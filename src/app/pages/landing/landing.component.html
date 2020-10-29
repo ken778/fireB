@@ -1,0 +1,17 @@
+<div class="addusers">
+    <form (ngSubmit)="AddUsers(UserData)" #UserData="ngForm">
+      <input name="name" ngModel #name="ngModel" />
+      <input name="surname" ngModel #surname="ngModel" />
+      <button type="submit">Add User</button>
+    </form>
+  </div>
+  <h2>list of users</h2>
+  <div *ngFor="let item of persons">
+    
+    <p> <a
+        class="back"
+        [routerLink]="['/', 'details', item.payload.doc.id]"
+        routerLinkActive="router-link-active"
+        >{{ item.payload.doc.data().name }} </a
+      ></p>
+  </div>

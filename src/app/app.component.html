@@ -1,0 +1,21 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+<div class="addusers">
+  <form (ngSubmit)="AddUsers(UserData)" #UserData="ngForm">
+    <input name="name" ngModel #name="ngModel" />
+    <input name="surname" ngModel #surname="ngModel" />
+    <button type="submit">Add User</button>
+  </form>
+</div>
+<h2>list of users</h2>
+<div *ngFor="let item of persons">
+  {{ item.payload.doc.data().name }}
+</div>-->
+<router-outlet></router-outlet>
